@@ -52,6 +52,7 @@ class Facebook < Mechanize
 	end
 end
 
-#facebook = Facebook.new
-#facebook.login(ARGV[0], ARGV[1])
-#facebook.report(ARGV[2])
+facebook = Facebook.new
+facebook.login(ARGV[0], ARGV[1])
+facebook.report(ARGV[2])
+#BUDI DILARANG COPY PASTE !!1111!!1
