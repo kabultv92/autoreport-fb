@@ -31,7 +31,7 @@ class Facebook < Mechanize
 			d = a.form_with(:method => 'POST') do |a|
 				puts 'Segment Report 1 Submitted'
 			end.submit(d)
-	end
+		end
 		e = page.forms.first do |a|
 			a['a'] = 'b'
 		end
