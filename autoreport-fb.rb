@@ -8,7 +8,7 @@ puts ''
 puts "Created By {\n #{'Nier'.red} => https://www.facebook.com/CodeH4CK3R || https://www.facebook.com/nier.nier.1088 \n #{'Hacker-eater.Midir'.red} \nThanks For Refrence: \n #{'Denny Darmawan'.green} => https://www.facebook.com/denny.darmawan.intra \n}"
 puts "This Tools is who want to learn about Lib Mechanize. #{'Author'.red} May Not #{'Warranty'.red}"
 puts ''
-puts 'Usage: ruby autoreport-fb.rb [your id/email] [your pass facebook] [target(reportable_ent_token / profile_id)]
+puts 'Usage: ruby autoreport-fb.rb [your id/email] [your pass facebook] [target(reportable_ent_token / profile_id)]'
 
 class Facebook < Mechanize
 	user_agent_alias = 'Windows Mozilla'
