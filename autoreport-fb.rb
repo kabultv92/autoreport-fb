@@ -5,8 +5,7 @@ require 'colorize'
 puts ''
 puts "BlackRuby-Dev => #{'www.facebook.com/groups/blackrubydeveloper'.green} || #{'When ruby Goes To Evil'.red}"
 puts ''
-puts "Created By {\n #{'Nier'.red} => https://www.facebook.com/CodeH4CK3R || https://www.facebook.com/nier.nier.1088 \n #{'Hacker-eater.Midir'.red} \nThanks For Refrence' \n #{'Denny Darmawan'.green} => https://www.facebook.com/denny.darmawan.intra"
-puts ''
+puts "Created By {\n #{'Nier'.red} => https://www.facebook.com/CodeH4CK3R || https://www.facebook.com/nier.nier.1088 \n #{'Hacker-eater.Midir'.red} \nThanks For Refrence: \n #{'Denny Darmawan'.green} => https://www.facebook.com/denny.darmawan.intra \n}"
 puts "This Tools is who want to learn about Lib Mechanize. #{'Author'.red} May Not #{'Warranty'.red}"
 puts ''
 
