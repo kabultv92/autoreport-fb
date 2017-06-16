@@ -74,17 +74,12 @@ end
 parser.parse!
 puts parser
 
-#Command
-a, b = ARGV
-
 if options[:login]
-	facebook.login(a, b)
+	facebook.login(ARGV[0], ARGV[1])
 end
 
-person = ARGV
-
 if options[:person]
-	facebook.report_someone(person)
+	facebook.report_someone(ARGV[2])
 end
 
 #BUDI DILARANG COPY PASTE !!1111!!1
