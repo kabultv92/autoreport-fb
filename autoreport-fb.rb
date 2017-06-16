@@ -73,7 +73,9 @@ parser = OptionParser.new do |opts|
 end
 
 parser.parse!
+puts patser
 
+#Command
 a, b = ARGV
 
 if options[:login]
