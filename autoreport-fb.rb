@@ -22,7 +22,6 @@ class Facebook < Mechanize
 			a.email = email
 			a.pass = pass
 		end.submit(form_login)
-		pp form_login
 	end
 
 	def report_someone(ent)
