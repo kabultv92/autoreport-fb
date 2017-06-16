@@ -54,7 +54,7 @@ end
 
 facebook = Facebook.new
 
-OptionParser.new do |opts|
+parser = OptionParser.new do |opts|
 	opts.banner = 'Usage: ruby autoreport-fb.rb [options]'
 	
 	opts.on('-l', '--login', 'Login Facebook') do |l|
@@ -70,7 +70,9 @@ OptionParser.new do |opts|
 		exit
 	end
 
-end.parse!
+end
+
+parser.parse!
 
 a, b = ARGV
 
