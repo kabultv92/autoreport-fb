@@ -72,7 +72,7 @@ parser = OptionParser.new do |opts|
 end
 
 parser.parse!
-puts patser
+puts parser
 
 #Command
 a, b = ARGV
