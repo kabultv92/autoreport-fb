@@ -2,26 +2,28 @@ require 'rubygems'
 require 'mechanize'
 require 'colorize'
 require 'optparse'
+require 'highline/import'
 
 options = {}
 
 puts ''
-puts "BlackRuby-Dev => #{'www.facebook.com/groups/blackrubydeveloper'.green} || #{'When ruby Goes To Evil'.red}"
+puts "#{'Quantum'.red} :: #{'Automata'.blue} => http://34.212.135.46/"
 puts ''
-puts "Created By {\n #{'Nier'.red} => https://www.facebook.com/nier2bpentesting \n #{'Hacker-eater.Midir'.red} \nThanks For Refrence: \n #{'Denny Darmawan'.green} => https://www.facebook.com/denny.darmawan.intra \n}"
+puts "Created By {\n #{'Cinder'.red} :: #{'Automata'.blue} => https://www.facebook.com/cinderautomata \nThanks For Refrence: \n #{'Denny Darmawan'.green} => https://www.facebook.com/denny.darmawan.intra \n}"
 puts "This Tools is who want to learn about Lib Mechanize. #{'Author'.red} May Not #{'Warranty'.red}"
 puts ''
 
 class Facebook < Mechanize
 	user_agent_alias = 'Windows Mozilla'
 	follow_meta_refresh = true
-	
+
 	def login(email, pass)
 		get 'https://www.facebook.com/'
 		form_login = page.form_with(:method => 'POST') do |a|
 			a.email = email
 			a.pass = pass
 		end.submit(form_login)
+		pp form_login
 	end
 
 	def report_someone(ent)
@@ -55,27 +57,31 @@ facebook = Facebook.new
 
 parser = OptionParser.new do |opts|
 	opts.banner = 'Usage: ruby autoreport-fb.rb [options]'
-	
-	opts.on('-l', '--login', 'Login Facebook') do |l|
+
+	opts.on('-l', '--login', 'Login Into Facebook') do |l|
 		options[:login] = l
 	end
-	
+
 	opts.on('-p', '--person', 'Report Account') do |p|
 		options[:person] = p
 	end
 
 	opts.on('-h', '--help', 'Puts Options') do
 		puts opts
+		puts ''
+		puts 'example : ruby autoreport-fb.rb --login --person "profile_id" #without tag'
+		puts ''
 		exit
 	end
 
 end
 
 parser.parse!
-puts parser
 
 if options[:login]
-	facebook.login(ARGV[0], ARGV[1])
+	usr = ask("Enter your username:  ") { |a| a.echo = true}
+	pwd = ask("Enter your password:  ") { |a| a.echo = "*" }
+	facebook.login(usr, pwd)
 end
 
 if options[:person]
