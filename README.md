@@ -1,8 +1,13 @@
 # autoreport-fb
-This Tools only a basic Facebook report content
+Proof Of Concept Abstractable Auto report profile facebook
 
-Required Library :
+Require Library :
 - Nokogiri
 - Mechanize
 - Colorize
-- Ruby 2.4.1
+- highline
+
+Installation :
+1. sudo apt-get install libssl-dev zlib1g-dev
+2. sudo gem install nokogiri mechanize colorize highline
+3. Run
