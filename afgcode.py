@@ -88,4 +88,4 @@ if options[:person]
 	facebook.report_someone(ARGV[2])
 end
 
-#BUDI DILARANG COPY PASTE !!1111!!1
+#AFG SHIR ASTI !!1111!!1
